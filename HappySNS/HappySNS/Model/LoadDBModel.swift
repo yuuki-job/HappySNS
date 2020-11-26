@@ -20,7 +20,10 @@ class LoadDBModel{
                     for document in querySnapshot!.documents {
                         let data = document.data()
                         print(data)
-                        if let userID = data["userID"] as? String,let userName = data["userName"] as? String,let postComment = data["comment"] as? String,let postImageView = data["postImageView"] as? String{
+                        guard let userID = data["userID"] as? String,let userName = data["userName"] as? String,let postComment = data["comment"] as? String else{return}
+                        let postImageView = data["postImageView"] as? String
+                        
+                            
                             
                             let newDataSet = DataSet(userID: userID, userName: userName, postComment: postComment, postImageView: postImageView)
                             
@@ -35,7 +38,7 @@ class LoadDBModel{
             
         }
     }
-}
+
         
         
     

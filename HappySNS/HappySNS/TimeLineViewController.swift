@@ -74,7 +74,7 @@ class TimeLineViewController: UIViewController{
 }
 extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 155
+        return 200
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         loadDBModel.dataSets.count
@@ -85,7 +85,7 @@ extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
         
         
         cell.postTextView.text = loadDBModel.dataSets[indexPath.row].postComment
-        //cell.profileImagiView.image = loadDBModel.dataSets[indexPath.row].postImageView
+        print(cell.postTextView.text as Any)
         return cell
         
     }

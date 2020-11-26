@@ -10,6 +10,6 @@ struct DataSet {
     let userID:String
     let userName:String
     let postComment:String
-    var postImageView:String
+    let postImageView:String?
     
 }

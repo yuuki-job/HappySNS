@@ -53,7 +53,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
          
         // 作成したボタンを UIBarButtonItem として設定
         let albumButtonItem = UIBarButtonItem(customView: albumButton)
-        
+        //ios以降から書かないと大きさ変更できなくなったらしい
         albumButtonItem.customView?.widthAnchor.constraint(equalToConstant: 24.0).isActive = true
         albumButtonItem.customView?.heightAnchor.constraint(equalToConstant: 24.0).isActive = true
         //let albumButton = UIBarButtonItem(title: UIImage(named: "album"), style: .done, target: self, action: #selector(tapAlbumButton))
