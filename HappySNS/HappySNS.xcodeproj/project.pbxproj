@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		521AA7602568F4C200D8F748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA75F2568F4C200D8F748 /* AppDelegate.swift */; };
+		521AA7622568F4C200D8F748 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7612568F4C200D8F748 /* SceneDelegate.swift */; };
+		521AA7642568F4C200D8F748 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7632568F4C200D8F748 /* TimeLineViewController.swift */; };
+		521AA7672568F4C200D8F748 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521AA7652568F4C200D8F748 /* Main.storyboard */; };
+		521AA7692568F4C700D8F748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521AA7682568F4C700D8F748 /* Assets.xcassets */; };
+		521AA76C2568F4C700D8F748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521AA76A2568F4C700D8F748 /* LaunchScreen.storyboard */; };
+		521AA7772568F4C800D8F748 /* HappySNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7762568F4C800D8F748 /* HappySNSTests.swift */; };
+		521AA7822568F4C800D8F748 /* HappySNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7812568F4C800D8F748 /* HappySNSUITests.swift */; };
+		521AA7BA25690BDB00D8F748 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7B925690BDB00D8F748 /* DataSet.swift */; };
+		521AA7BF25690C3100D8F748 /* LoadDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7BE25690C3100D8F748 /* LoadDBModel.swift */; };
+		521AA7C425690CB800D8F748 /* SendDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7C325690CB800D8F748 /* SendDBModel.swift */; };
+		521AA7C925690F5100D8F748 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521AA7C825690F5100D8F748 /* GoogleService-Info.plist */; };
+		521AA7D1256918B200D8F748 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7D0256918B200D8F748 /* EditViewController.swift */; };
+		527A4487256E176500BF9A49 /* PostContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */; };
+		527A4488256E176500BF9A49 /* PostContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */; };
+		6651E1C0754CAF256AF5085C /* Pods_HappySNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE311342F846ABB2803F2AC /* Pods_HappySNSTests.framework */; };
+		8FE166C7B3B94482FBAE27CC /* Pods_HappySNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */; };
+		C2262E682742D32D3B49FEA7 /* Pods_HappySNS_HappySNSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2CBD2224B34BEC2E5E903 /* Pods_HappySNS_HappySNSUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		521AA7732568F4C800D8F748 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521AA7542568F4C200D8F748 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 521AA75B2568F4C200D8F748;
+			remoteInfo = HappySNS;
+		};
+		521AA77E2568F4C800D8F748 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521AA7542568F4C200D8F748 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 521AA75B2568F4C200D8F748;
+			remoteInfo = HappySNS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03902EE78A19F140653BC64C /* Pods-HappySNS-HappySNSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS-HappySNSUITests.debug.xcconfig"; path = "Target Support Files/Pods-HappySNS-HappySNSUITests/Pods-HappySNS-HappySNSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		143091DCD425AC26B4C2F491 /* Pods-HappySNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS.debug.xcconfig"; path = "Target Support Files/Pods-HappySNS/Pods-HappySNS.debug.xcconfig"; sourceTree = "<group>"; };
+		3328437B78579351070C0293 /* Pods-HappySNSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNSTests.release.xcconfig"; path = "Target Support Files/Pods-HappySNSTests/Pods-HappySNSTests.release.xcconfig"; sourceTree = "<group>"; };
+		521AA75C2568F4C200D8F748 /* HappySNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappySNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		521AA75F2568F4C200D8F748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		521AA7612568F4C200D8F748 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		521AA7632568F4C200D8F748 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		521AA7662568F4C200D8F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		521AA7682568F4C700D8F748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		521AA76B2568F4C700D8F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		521AA76D2568F4C700D8F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521AA7722568F4C800D8F748 /* HappySNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappySNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		521AA7762568F4C800D8F748 /* HappySNSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappySNSTests.swift; sourceTree = "<group>"; };
+		521AA7782568F4C800D8F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521AA77D2568F4C800D8F748 /* HappySNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappySNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		521AA7812568F4C800D8F748 /* HappySNSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappySNSUITests.swift; sourceTree = "<group>"; };
+		521AA7832568F4C800D8F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521AA7B925690BDB00D8F748 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+		521AA7BE25690C3100D8F748 /* LoadDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDBModel.swift; sourceTree = "<group>"; };
+		521AA7C325690CB800D8F748 /* SendDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDBModel.swift; sourceTree = "<group>"; };
+		521AA7C825690F5100D8F748 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		521AA7D0256918B200D8F748 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentTableViewCell.swift; sourceTree = "<group>"; };
+		527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContentTableViewCell.xib; sourceTree = "<group>"; };
+		7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8128676BF3866220082330DA /* Pods-HappySNS-HappySNSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS-HappySNSUITests.release.xcconfig"; path = "Target Support Files/Pods-HappySNS-HappySNSUITests/Pods-HappySNS-HappySNSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		86499B8323AE4E3D4635E2C3 /* Pods-HappySNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS.release.xcconfig"; path = "Target Support Files/Pods-HappySNS/Pods-HappySNS.release.xcconfig"; sourceTree = "<group>"; };
+		8BE311342F846ABB2803F2AC /* Pods_HappySNSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySNSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC320A87D83D595AE5F4CF2D /* Pods-HappySNSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNSTests.debug.xcconfig"; path = "Target Support Files/Pods-HappySNSTests/Pods-HappySNSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4F2CBD2224B34BEC2E5E903 /* Pods_HappySNS_HappySNSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySNS_HappySNSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		521AA7592568F4C200D8F748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE166C7B3B94482FBAE27CC /* Pods_HappySNS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521AA76F2568F4C800D8F748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6651E1C0754CAF256AF5085C /* Pods_HappySNSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521AA77A2568F4C800D8F748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2262E682742D32D3B49FEA7 /* Pods_HappySNS_HappySNSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		521AA7532568F4C200D8F748 = {
+			isa = PBXGroup;
+			children = (
+				521AA75E2568F4C200D8F748 /* HappySNS */,
+				521AA7752568F4C800D8F748 /* HappySNSTests */,
+				521AA7802568F4C800D8F748 /* HappySNSUITests */,
+				521AA75D2568F4C200D8F748 /* Products */,
+				B4B0478245E5654CFC477CE4 /* Pods */,
+				7EDCA6BB1833FEDE3EC60C4E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		521AA75D2568F4C200D8F748 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				521AA75C2568F4C200D8F748 /* HappySNS.app */,
+				521AA7722568F4C800D8F748 /* HappySNSTests.xctest */,
+				521AA77D2568F4C800D8F748 /* HappySNSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		521AA75E2568F4C200D8F748 /* HappySNS */ = {
+			isa = PBXGroup;
+			children = (
+				521AA7B225690BAE00D8F748 /* Model */,
+				521AA75F2568F4C200D8F748 /* AppDelegate.swift */,
+				521AA7612568F4C200D8F748 /* SceneDelegate.swift */,
+				521AA7632568F4C200D8F748 /* TimeLineViewController.swift */,
+				521AA7D0256918B200D8F748 /* EditViewController.swift */,
+				521AA7652568F4C200D8F748 /* Main.storyboard */,
+				521AA7682568F4C700D8F748 /* Assets.xcassets */,
+				521AA76A2568F4C700D8F748 /* LaunchScreen.storyboard */,
+				521AA76D2568F4C700D8F748 /* Info.plist */,
+				521AA7C825690F5100D8F748 /* GoogleService-Info.plist */,
+				527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */,
+				527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */,
+			);
+			path = HappySNS;
+			sourceTree = "<group>";
+		};
+		521AA7752568F4C800D8F748 /* HappySNSTests */ = {
+			isa = PBXGroup;
+			children = (
+				521AA7762568F4C800D8F748 /* HappySNSTests.swift */,
+				521AA7782568F4C800D8F748 /* Info.plist */,
+			);
+			path = HappySNSTests;
+			sourceTree = "<group>";
+		};
+		521AA7802568F4C800D8F748 /* HappySNSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				521AA7812568F4C800D8F748 /* HappySNSUITests.swift */,
+				521AA7832568F4C800D8F748 /* Info.plist */,
+			);
+			path = HappySNSUITests;
+			sourceTree = "<group>";
+		};
+		521AA7B225690BAE00D8F748 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				521AA7B925690BDB00D8F748 /* DataSet.swift */,
+				521AA7BE25690C3100D8F748 /* LoadDBModel.swift */,
+				521AA7C325690CB800D8F748 /* SendDBModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EDCA6BB1833FEDE3EC60C4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */,
+				E4F2CBD2224B34BEC2E5E903 /* Pods_HappySNS_HappySNSUITests.framework */,
+				8BE311342F846ABB2803F2AC /* Pods_HappySNSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4B0478245E5654CFC477CE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				143091DCD425AC26B4C2F491 /* Pods-HappySNS.debug.xcconfig */,
+				86499B8323AE4E3D4635E2C3 /* Pods-HappySNS.release.xcconfig */,
+				03902EE78A19F140653BC64C /* Pods-HappySNS-HappySNSUITests.debug.xcconfig */,
+				8128676BF3866220082330DA /* Pods-HappySNS-HappySNSUITests.release.xcconfig */,
+				DC320A87D83D595AE5F4CF2D /* Pods-HappySNSTests.debug.xcconfig */,
+				3328437B78579351070C0293 /* Pods-HappySNSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		521AA75B2568F4C200D8F748 /* HappySNS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 521AA7862568F4C800D8F748 /* Build configuration list for PBXNativeTarget "HappySNS" */;
+			buildPhases = (
+				80FBEA1E6990AE1BCC199911 /* [CP] Check Pods Manifest.lock */,
+				521AA7582568F4C200D8F748 /* Sources */,
+				521AA7592568F4C200D8F748 /* Frameworks */,
+				521AA75A2568F4C200D8F748 /* Resources */,
+				C814E543528297D57349ACAC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappySNS;
+			productName = HappySNS;
+			productReference = 521AA75C2568F4C200D8F748 /* HappySNS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		521AA7712568F4C800D8F748 /* HappySNSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 521AA7892568F4C800D8F748 /* Build configuration list for PBXNativeTarget "HappySNSTests" */;
+			buildPhases = (
+				A0059435886A130BF2F8600A /* [CP] Check Pods Manifest.lock */,
+				521AA76E2568F4C800D8F748 /* Sources */,
+				521AA76F2568F4C800D8F748 /* Frameworks */,
+				521AA7702568F4C800D8F748 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				521AA7742568F4C800D8F748 /* PBXTargetDependency */,
+			);
+			name = HappySNSTests;
+			productName = HappySNSTests;
+			productReference = 521AA7722568F4C800D8F748 /* HappySNSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		521AA77C2568F4C800D8F748 /* HappySNSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 521AA78C2568F4C800D8F748 /* Build configuration list for PBXNativeTarget "HappySNSUITests" */;
+			buildPhases = (
+				BB145ED60994B10AA7E9EF58 /* [CP] Check Pods Manifest.lock */,
+				521AA7792568F4C800D8F748 /* Sources */,
+				521AA77A2568F4C800D8F748 /* Frameworks */,
+				521AA77B2568F4C800D8F748 /* Resources */,
+				A2CFD83C49A6B58B9C2BC3E2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				521AA77F2568F4C800D8F748 /* PBXTargetDependency */,
+			);
+			name = HappySNSUITests;
+			productName = HappySNSUITests;
+			productReference = 521AA77D2568F4C800D8F748 /* HappySNSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		521AA7542568F4C200D8F748 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					521AA75B2568F4C200D8F748 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					521AA7712568F4C800D8F748 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 521AA75B2568F4C200D8F748;
+					};
+					521AA77C2568F4C800D8F748 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 521AA75B2568F4C200D8F748;
+					};
+				};
+			};
+			buildConfigurationList = 521AA7572568F4C200D8F748 /* Build configuration list for PBXProject "HappySNS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 521AA7532568F4C200D8F748;
+			productRefGroup = 521AA75D2568F4C200D8F748 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				521AA75B2568F4C200D8F748 /* HappySNS */,
+				521AA7712568F4C800D8F748 /* HappySNSTests */,
+				521AA77C2568F4C800D8F748 /* HappySNSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		521AA75A2568F4C200D8F748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521AA76C2568F4C700D8F748 /* LaunchScreen.storyboard in Resources */,
+				521AA7692568F4C700D8F748 /* Assets.xcassets in Resources */,
+				521AA7672568F4C200D8F748 /* Main.storyboard in Resources */,
+				527A4488256E176500BF9A49 /* PostContentTableViewCell.xib in Resources */,
+				521AA7C925690F5100D8F748 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521AA7702568F4C800D8F748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521AA77B2568F4C800D8F748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80FBEA1E6990AE1BCC199911 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappySNS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0059435886A130BF2F8600A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappySNSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2CFD83C49A6B58B9C2BC3E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappySNS-HappySNSUITests/Pods-HappySNS-HappySNSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappySNS-HappySNSUITests/Pods-HappySNS-HappySNSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HappySNS-HappySNSUITests/Pods-HappySNS-HappySNSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB145ED60994B10AA7E9EF58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappySNS-HappySNSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C814E543528297D57349ACAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappySNS/Pods-HappySNS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappySNS/Pods-HappySNS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HappySNS/Pods-HappySNS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		521AA7582568F4C200D8F748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521AA7642568F4C200D8F748 /* TimeLineViewController.swift in Sources */,
+				521AA7602568F4C200D8F748 /* AppDelegate.swift in Sources */,
+				521AA7BA25690BDB00D8F748 /* DataSet.swift in Sources */,
+				521AA7C425690CB800D8F748 /* SendDBModel.swift in Sources */,
+				521AA7622568F4C200D8F748 /* SceneDelegate.swift in Sources */,
+				527A4487256E176500BF9A49 /* PostContentTableViewCell.swift in Sources */,
+				521AA7BF25690C3100D8F748 /* LoadDBModel.swift in Sources */,
+				521AA7D1256918B200D8F748 /* EditViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521AA76E2568F4C800D8F748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521AA7772568F4C800D8F748 /* HappySNSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521AA7792568F4C800D8F748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521AA7822568F4C800D8F748 /* HappySNSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		521AA7742568F4C800D8F748 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 521AA75B2568F4C200D8F748 /* HappySNS */;
+			targetProxy = 521AA7732568F4C800D8F748 /* PBXContainerItemProxy */;
+		};
+		521AA77F2568F4C800D8F748 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 521AA75B2568F4C200D8F748 /* HappySNS */;
+			targetProxy = 521AA77E2568F4C800D8F748 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		521AA7652568F4C200D8F748 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				521AA7662568F4C200D8F748 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		521AA76A2568F4C700D8F748 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				521AA76B2568F4C700D8F748 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		521AA7842568F4C800D8F748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		521AA7852568F4C800D8F748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		521AA7872568F4C800D8F748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143091DCD425AC26B4C2F491 /* Pods-HappySNS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQP7L55495;
+				INFOPLIST_FILE = HappySNS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yu.to.HappySNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		521AA7882568F4C800D8F748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86499B8323AE4E3D4635E2C3 /* Pods-HappySNS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQP7L55495;
+				INFOPLIST_FILE = HappySNS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yu.to.HappySNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		521AA78A2568F4C800D8F748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC320A87D83D595AE5F4CF2D /* Pods-HappySNSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQP7L55495;
+				INFOPLIST_FILE = HappySNSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yu.to.HappySNSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappySNS.app/HappySNS";
+			};
+			name = Debug;
+		};
+		521AA78B2568F4C800D8F748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3328437B78579351070C0293 /* Pods-HappySNSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQP7L55495;
+				INFOPLIST_FILE = HappySNSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yu.to.HappySNSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappySNS.app/HappySNS";
+			};
+			name = Release;
+		};
+		521AA78D2568F4C800D8F748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03902EE78A19F140653BC64C /* Pods-HappySNS-HappySNSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQP7L55495;
+				INFOPLIST_FILE = HappySNSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yu.to.HappySNSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HappySNS;
+			};
+			name = Debug;
+		};
+		521AA78E2568F4C800D8F748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8128676BF3866220082330DA /* Pods-HappySNS-HappySNSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQP7L55495;
+				INFOPLIST_FILE = HappySNSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yu.to.HappySNSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HappySNS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		521AA7572568F4C200D8F748 /* Build configuration list for PBXProject "HappySNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521AA7842568F4C800D8F748 /* Debug */,
+				521AA7852568F4C800D8F748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		521AA7862568F4C800D8F748 /* Build configuration list for PBXNativeTarget "HappySNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521AA7872568F4C800D8F748 /* Debug */,
+				521AA7882568F4C800D8F748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		521AA7892568F4C800D8F748 /* Build configuration list for PBXNativeTarget "HappySNSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521AA78A2568F4C800D8F748 /* Debug */,
+				521AA78B2568F4C800D8F748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		521AA78C2568F4C800D8F748 /* Build configuration list for PBXNativeTarget "HappySNSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521AA78D2568F4C800D8F748 /* Debug */,
+				521AA78E2568F4C800D8F748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 521AA7542568F4C200D8F748 /* Project object */;
+}
