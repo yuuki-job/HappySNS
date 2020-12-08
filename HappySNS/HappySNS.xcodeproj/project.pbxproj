@@ -175,6 +175,7 @@
 			children = (
 				521AA7652568F4C200D8F748 /* Main.storyboard */,
 				527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */,
+				527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */,
 				52439EEF257F47BF00E73DE1 /* Assets.xcassets */,
 			);
 			path = View;
@@ -185,7 +186,6 @@
 			children = (
 				521AA7632568F4C200D8F748 /* TimeLineViewController.swift */,
 				521AA7D0256918B200D8F748 /* EditViewController.swift */,
-				527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
