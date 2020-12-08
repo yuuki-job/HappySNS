@@ -24,9 +24,9 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         if textView.text?.isEmpty == true{
             return
         }
-        let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01) ?? "".data(using: String.Encoding.utf8)!
+        let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01)
         
-        let sendDBModel = SendDBModel(userID: "", userName: "", postComment: textView.text, postImageView: passImageViewData )
+        let sendDBModel = SendDBModel(userID: "", userName: "", postComment: textView.text, postImageView: passImageViewData ?? "".data(using: String.Encoding.utf8)! )
         
         sendDBModel.sendData()
         //戻る
@@ -35,22 +35,22 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     
     func toolBarSetUp(){
         // ボタンのサイズ
-                let buttonSize: CGFloat = 24
+        let buttonSize: CGFloat = 24
         // ツールバーのインスタンスを作成
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: buttonSize, height: 35))
-       
-                
+        
+        
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
         // UIButtonの作成
         let albumButton = UIButton(frame: CGRect(x: 200, y: 0, width: buttonSize, height: 10))
-         
+        
         // ボタンの背景に画像を設定
         albumButton.setBackgroundImage(UIImage(named: "album"), for: UIControl.State())
-         
+        
         // ボタンをクリックしたときに呼び出すメソッドを指定
         albumButton.addTarget(self, action: #selector(tapAlbumButton), for: .touchUpInside)
-         
+        
         // 作成したボタンを UIBarButtonItem として設定
         let albumButtonItem = UIBarButtonItem(customView: albumButton)
         //ios以降から書かないと大きさ変更できなくなったらしい

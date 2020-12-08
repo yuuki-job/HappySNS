@@ -337,6 +337,9 @@ PODS:
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.11)
   - RAMAnimatedTabBarController (5.2.0)
+  - SDWebImage (5.9.4):
+    - SDWebImage/Core (= 5.9.4)
+  - SDWebImage/Core (5.9.4)
   - ViewAnimator (3.0.1)
 
 DEPENDENCIES:
@@ -345,6 +348,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - RAMAnimatedTabBarController
+  - SDWebImage (~> 5.0)
   - ViewAnimator
 
 SPEC REPOS:
@@ -369,6 +373,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - RAMAnimatedTabBarController
+    - SDWebImage
     - ViewAnimator
 
 SPEC CHECKSUMS:
@@ -392,8 +397,9 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   ViewAnimator: dd18d2f5c1e472f78d0065ff92750fe56cbd2f39
 
-PODFILE CHECKSUM: 300b7bba4a8b970908844bce361ac34535fee552
+PODFILE CHECKSUM: 59734bd7a9ed1eb16af44548278ae54cac24fe46
 
 COCOAPODS: 1.9.1

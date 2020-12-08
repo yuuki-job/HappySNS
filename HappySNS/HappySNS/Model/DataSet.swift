@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct DataSet {
+struct DataSet{
     let userID:String
     let userName:String
     let postComment:String

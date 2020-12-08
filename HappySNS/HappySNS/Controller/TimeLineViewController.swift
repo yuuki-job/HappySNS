@@ -8,6 +8,7 @@
 import UIKit
 import RAMAnimatedTabBarController
 import ViewAnimator
+import SDWebImage
 
 class TimeLineViewController: UIViewController{
     
@@ -24,8 +25,8 @@ class TimeLineViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         
-                //可変にしたいとき
-                tableView.estimatedRowHeight = 500
+        //可変にしたいとき
+        tableView.estimatedRowHeight = 500
         tableView.rowHeight = UITableView.automaticDimension
         
         tableView.register(UINib(nibName: "PostContentTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
@@ -51,6 +52,7 @@ class TimeLineViewController: UIViewController{
         updateData()
         
         semaphore.wait()
+        
         //semaphore.signal()
         // データ更新関数が終了したら、リフレッシュの表示も終了する
         refreshControl.endRefreshing()
@@ -61,9 +63,11 @@ class TimeLineViewController: UIViewController{
             //ここでデータを更新する処理をする
             
             DispatchQueue.main.async {
-                self.loadDBModel.loadContents()
+                
+                self.loadDBModel.getAllDocument()
                 self.tableView.reloadData()
                 self.semaphore.signal() // 処理が終わった信号を送る
+                
             }
         }
     }
@@ -84,8 +88,9 @@ extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostContentTableViewCell
         
         
-        cell.postTextView.text = loadDBModel.dataSets[indexPath.row].postComment
-        print(cell.postTextView.text as Any)
+        cell.postLabel.text = loadDBModel.dataSets[indexPath.row].postComment
+        cell.profileImagiView.sd_setImage(with: URL(string: loadDBModel.dataSets[indexPath.row].postImageView ?? ""), completed: nil)
+        
         return cell
         
     }

@@ -12,8 +12,7 @@ class PostContentTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImagiView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     
-    @IBOutlet weak var postTextView: UITextView!
-    
+    @IBOutlet weak var postLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

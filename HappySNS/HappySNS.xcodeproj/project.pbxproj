@@ -11,7 +11,6 @@
 		521AA7622568F4C200D8F748 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7612568F4C200D8F748 /* SceneDelegate.swift */; };
 		521AA7642568F4C200D8F748 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7632568F4C200D8F748 /* TimeLineViewController.swift */; };
 		521AA7672568F4C200D8F748 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521AA7652568F4C200D8F748 /* Main.storyboard */; };
-		521AA7692568F4C700D8F748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521AA7682568F4C700D8F748 /* Assets.xcassets */; };
 		521AA76C2568F4C700D8F748 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521AA76A2568F4C700D8F748 /* LaunchScreen.storyboard */; };
 		521AA7772568F4C800D8F748 /* HappySNSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7762568F4C800D8F748 /* HappySNSTests.swift */; };
 		521AA7822568F4C800D8F748 /* HappySNSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7812568F4C800D8F748 /* HappySNSUITests.swift */; };
@@ -20,6 +19,7 @@
 		521AA7C425690CB800D8F748 /* SendDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7C325690CB800D8F748 /* SendDBModel.swift */; };
 		521AA7C925690F5100D8F748 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521AA7C825690F5100D8F748 /* GoogleService-Info.plist */; };
 		521AA7D1256918B200D8F748 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7D0256918B200D8F748 /* EditViewController.swift */; };
+		52439EF0257F47BF00E73DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52439EEF257F47BF00E73DE1 /* Assets.xcassets */; };
 		527A4487256E176500BF9A49 /* PostContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */; };
 		527A4488256E176500BF9A49 /* PostContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */; };
 		6651E1C0754CAF256AF5085C /* Pods_HappySNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE311342F846ABB2803F2AC /* Pods_HappySNSTests.framework */; };
@@ -53,7 +53,6 @@
 		521AA7612568F4C200D8F748 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		521AA7632568F4C200D8F748 /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		521AA7662568F4C200D8F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		521AA7682568F4C700D8F748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521AA76B2568F4C700D8F748 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		521AA76D2568F4C700D8F748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521AA7722568F4C800D8F748 /* HappySNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappySNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +65,8 @@
 		521AA7BE25690C3100D8F748 /* LoadDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDBModel.swift; sourceTree = "<group>"; };
 		521AA7C325690CB800D8F748 /* SendDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDBModel.swift; sourceTree = "<group>"; };
 		521AA7C825690F5100D8F748 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		521AA7D0256918B200D8F748 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		521AA7D0256918B200D8F748 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = "../New Group/EditViewController.swift"; sourceTree = "<group>"; };
+		52439EEF257F47BF00E73DE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentTableViewCell.swift; sourceTree = "<group>"; };
 		527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContentTableViewCell.xib; sourceTree = "<group>"; };
 		7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,17 +131,13 @@
 			isa = PBXGroup;
 			children = (
 				521AA7B225690BAE00D8F748 /* Model */,
+				52418C0E257F434100A0E4C0 /* View */,
+				52439EE5257F45A900E73DE1 /* Controller */,
 				521AA75F2568F4C200D8F748 /* AppDelegate.swift */,
 				521AA7612568F4C200D8F748 /* SceneDelegate.swift */,
-				521AA7632568F4C200D8F748 /* TimeLineViewController.swift */,
-				521AA7D0256918B200D8F748 /* EditViewController.swift */,
-				521AA7652568F4C200D8F748 /* Main.storyboard */,
-				521AA7682568F4C700D8F748 /* Assets.xcassets */,
 				521AA76A2568F4C700D8F748 /* LaunchScreen.storyboard */,
 				521AA76D2568F4C700D8F748 /* Info.plist */,
 				521AA7C825690F5100D8F748 /* GoogleService-Info.plist */,
-				527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */,
-				527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */,
 			);
 			path = HappySNS;
 			sourceTree = "<group>";
@@ -172,6 +168,26 @@
 				521AA7C325690CB800D8F748 /* SendDBModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52418C0E257F434100A0E4C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				521AA7652568F4C200D8F748 /* Main.storyboard */,
+				527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */,
+				52439EEF257F47BF00E73DE1 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52439EE5257F45A900E73DE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				521AA7632568F4C200D8F748 /* TimeLineViewController.swift */,
+				521AA7D0256918B200D8F748 /* EditViewController.swift */,
+				527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		7EDCA6BB1833FEDE3EC60C4E /* Frameworks */ = {
@@ -306,10 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				521AA76C2568F4C700D8F748 /* LaunchScreen.storyboard in Resources */,
-				521AA7692568F4C700D8F748 /* Assets.xcassets in Resources */,
 				521AA7672568F4C200D8F748 /* Main.storyboard in Resources */,
 				527A4488256E176500BF9A49 /* PostContentTableViewCell.xib in Resources */,
 				521AA7C925690F5100D8F748 /* GoogleService-Info.plist in Resources */,
+				52439EF0257F47BF00E73DE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,17 +29,17 @@ class SendDBModel{
         self.userName = userName
         self.postComment = postComment
         self.postImageView = postImageView
-       
+        
     }
     
     func sendData(){
-                
-        self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":self.postImageView])
-                
-                
-                     }
-            
-            
-        }
         
+        self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":self.postImageView])
+        
+        
+    }
     
+    
+}
+
+

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Time Line View Controller-->
+        <!--投稿内容-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TimeLineViewController" customModule="HappySNS" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zve-hm-ncR">
+                    <navigationItem key="navigationItem" title="投稿内容" id="Zve-hm-ncR">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="rI7-XI-vF6">
                             <connections>
                                 <segue destination="1Us-FM-hQh" kind="show" id="gax-Yv-WEF"/>
