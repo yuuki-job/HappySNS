@@ -15,7 +15,8 @@ class PostContentTableViewCell: UITableViewCell {
     @IBOutlet weak var postLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
+        postLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

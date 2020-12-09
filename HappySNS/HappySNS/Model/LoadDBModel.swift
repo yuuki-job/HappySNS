@@ -7,7 +7,8 @@
 
 import Foundation
 import Firebase
-class LoadDBModel{
+import FirebaseFirestore
+class LoadPostDataManager{
     
     var dataSets = [DataSet]()
     let db = Firestore.firestore()
@@ -51,12 +52,13 @@ class LoadDBModel{
      }
      
      }*/
-    func getAllDocument(){
-        
+    func getPostData(){
+        var dataSet2:[DataSet] = []
         db.collection("datas").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     print(data)
@@ -64,21 +66,20 @@ class LoadDBModel{
                     guard let userID = data["userID"] as? String,let userName = data["userName"] as? String,let postComment = data["comment"] as? String else{return}
                     let postImageView = data["postImageView"] as? String
                     
-                    
-                    
                     let newDataSet = DataSet(userID: userID, userName: userName, postComment: postComment, postImageView: postImageView)
                     
-                    self.dataSets.removeAll()
-                    self.dataSets.append(newDataSet)
-                    print(self.dataSets)
-                    //反転させて新し物が上から来るようになる。
-                    self.dataSets.reverse()
+                    dataSet2.append(newDataSet)
+                    
                     print("新規メッセージを取得しました")
                 }
+                
+                self.dataSets = dataSet2
+                //反転させて新し物が上から来るようになる。
+                //self.dataSets.reverse()
+                print(self.dataSets)
             }
         }
     }
-    
 }
 
 /*db.collection("datas").order(by: "postDate").addSnapshotListener {  (snapShot, error) in

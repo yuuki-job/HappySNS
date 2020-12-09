@@ -14,7 +14,7 @@ class TimeLineViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
-    var loadDBModel = LoadDBModel()
+    var loadDBModel = LoadPostDataManager()
     //スクロールビューの内容の更新を開始できる標準のコントロール。
     var refreshControl:UIRefreshControl!
     
@@ -29,6 +29,7 @@ class TimeLineViewController: UIViewController{
         tableView.estimatedRowHeight = 500
         tableView.rowHeight = UITableView.automaticDimension
         
+        //登録
         tableView.register(UINib(nibName: "PostContentTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         refreshControl = UIRefreshControl()
@@ -53,7 +54,7 @@ class TimeLineViewController: UIViewController{
         
         semaphore.wait()
         
-        //semaphore.signal()
+        semaphore.signal()
         // データ更新関数が終了したら、リフレッシュの表示も終了する
         refreshControl.endRefreshing()
     }
@@ -64,7 +65,7 @@ class TimeLineViewController: UIViewController{
             
             DispatchQueue.main.async {
                 
-                self.loadDBModel.getAllDocument()
+                self.loadDBModel.getPostData()
                 self.tableView.reloadData()
                 self.semaphore.signal() // 処理が終わった信号を送る
                 
