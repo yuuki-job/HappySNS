@@ -18,29 +18,33 @@ class SendDBModel{
     
     var db = Firestore.firestore()
     
-    
-    
-    //送信機能を集約する
-    init() {
-        
-    }
-    
     init(userID:String,userName:String,postComment:String,postImageView:Data) {
         self.userID = userID
         self.userName = userName
         self.postComment = postComment
         self.postImageView = postImageView
-        
     }
     
     func sendData(){
         
         self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":self.postImageView])
         
-        
     }
-    
-    
+    class func sendImageData(postImageView:Data){
+        let storageRef = Storage.storage().reference()
+        let ref = storageRef.child("image.jpg")
+        
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        ref.putData(postImageView, metadata: metadata) { _, error in
+            if (error != nil) {
+                print("upload error!")
+            } else {
+                print("upload successful!")
+            }
+            
+        }
+    }
 }
 
 

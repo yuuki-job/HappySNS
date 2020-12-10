@@ -200,7 +200,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4B9C1B5F-8F02-4A97-81E9-227C4C8594C9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HappySNS/Model/LoadDBModel.swift"
@@ -210,6 +210,70 @@
             endingLineNumber = "71"
             landmarkName = "getPostData()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47EDC25C-62A3-4BA5-A03B-304710ABDB9B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HappySNS/New Group/EditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "postButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87F48E5E-CA30-4AA8-812C-AEE11A6271D3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HappySNS/Model/SendDBModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "sendImageData(postImageView:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "87F48E5E-CA30-4AA8-812C-AEE11A6271D3 - 653225e4681a9d03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static HappySNS.SendDBModel.sendImageData(postImageView: Foundation.Data) -&gt; ()"
+                  moduleName = "HappySNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tokunagaisamunozomi/Documents/%E6%9B%B8%E9%A1%9E%20-%20%E5%BE%B3%E6%B0%B8%E5%8B%87%E5%B8%8C%E3%81%AEMacBook%20Air/myApp/HappySNSFolder/HappySNS/HappySNS/Model/SendDBModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "461">
+               </Location>
+               <Location
+                  uuid = "87F48E5E-CA30-4AA8-812C-AEE11A6271D3 - d311797cd17ef5ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static HappySNS.SendDBModel.sendImageData(postImageView: Foundation.Data) -&gt; ()"
+                  moduleName = "HappySNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tokunagaisamunozomi/Documents/%E6%9B%B8%E9%A1%9E%20-%20%E5%BE%B3%E6%B0%B8%E5%8B%87%E5%B8%8C%E3%81%AEMacBook%20Air/myApp/HappySNSFolder/HappySNS/HappySNS/Model/SendDBModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

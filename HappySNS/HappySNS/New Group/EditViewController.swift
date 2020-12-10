@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -24,14 +25,21 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         if textView.text?.isEmpty == true{
             return
         }
-        let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01)
         
-        let sendDBModel = SendDBModel(userID: "", userName: "", postComment: textView.text, postImageView: passImageViewData ?? "".data(using: String.Encoding.utf8)! )
+        
+        guard let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01) else {return}
+        
+        SendDBModel.sendImageData(postImageView: passImageViewData)
+        
+        
+        
+        let sendDBModel = SendDBModel(userID: "", userName: "", postComment: textView.text, postImageView: passImageViewData )
         
         sendDBModel.sendData()
         //戻る
         self.navigationController?.popViewController(animated: true)
     }
+    
     
     func toolBarSetUp(){
         // ボタンのサイズ
