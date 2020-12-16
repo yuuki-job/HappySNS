@@ -20,24 +20,31 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     }
     
     @IBAction func postButton(_ sender: Any) {
-        
-        //送信
-        if textView.text?.isEmpty == true{
-            return
-        }
-        
-        
+
+        //画像
         guard let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01) else {return}
+        
+        //日時
+        
         
         SendDBModel.sendImageData(postImageView: passImageViewData)
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .medium
+        let now = Date()
         
+        let currentTime = dateFormatter.string(from: now)
         
-        let sendDBModel = SendDBModel(userID: "", userName: "", postComment: textView.text, postImageView: passImageViewData )
+        let sendDBModel = SendDBModel(userID: "", userName: "", postComment: textView.text, postImageView: passImageViewData, currentTime: currentTime)
         
         sendDBModel.sendData()
         //戻る
+        if textView.text?.isEmpty == false{
+        
         self.navigationController?.popViewController(animated: true)
+            
+        }
     }
     
     

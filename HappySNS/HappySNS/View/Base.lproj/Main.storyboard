@@ -71,7 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="postButton:" destination="1Us-FM-hQh" eventType="touchUpInside" id="QNo-Z9-dBW"/>
+                                    <action selector="postButton:" destination="1Us-FM-hQh" eventType="touchUpInside" id="Spa-0W-emX"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8k-fk-OuY">

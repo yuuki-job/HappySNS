@@ -54,7 +54,10 @@ class LoadPostDataManager{
      }*/
     func getPostData(){
         var dataSet2:[DataSet] = []
-        db.collection("datas").getDocuments() { (querySnapshot, err) in
+        db.collection("datas").order(by: "currentTime").addSnapshotListener
+        { (querySnapshot, err) in
+            
+            
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -62,25 +65,40 @@ class LoadPostDataManager{
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     print(data)
-                    
-                    guard let userID = data["userID"] as? String,let userName = data["userName"] as? String,let postComment = data["comment"] as? String else{return}
-                    let postImageView = data["postImageView"] as? String
-                    
-                    let newDataSet = DataSet(userID: userID, userName: userName, postComment: postComment, postImageView: postImageView)
+                    guard let userID = data["userID"] as? String,let userName = data["userName"] as? String,let currentTime = data["currentTime"] as? String else{return}
+                    guard let postComment = data["comment"] as? String else{return}
+                    //let postImageView = data["postImageView"] as? String
+                    print(postComment)
+                    let newDataSet = DataSet(userID: userID, userName: userName, postComment: postComment, currentTime: currentTime)
                     
                     dataSet2.append(newDataSet)
                     
                     print("新規メッセージを取得しました")
+                    
+                    
+                    self.dataSets = dataSet2
+                    //反転させて新し物が上から来るようになる。
+                    self.dataSets.reverse()
+                    //print(self.dataSets)
                 }
-                
-                self.dataSets = dataSet2
-                //反転させて新し物が上から来るようになる。
-                //self.dataSets.reverse()
-                print(self.dataSets)
             }
         }
     }
+    func downloadImage(){
+        Storage.storage().reference().child("image.jpg/file.png").downloadURL { (url, error) in
+            if let error = error {
+                print(error)
+            } else {
+                guard let urlString = url?.absoluteString else{return}
+                let imageData = DataSet(postImageView: urlString)
+                self.dataSets.append(imageData)
+                print(urlString )
+            }
+        }
+        
+    }
 }
+
 
 /*db.collection("datas").order(by: "postDate").addSnapshotListener {  (snapShot, error) in
  if error != nil{
@@ -94,3 +112,4 @@ class LoadPostDataManager{
  let data = doc.data()
  print(data)
  */
+

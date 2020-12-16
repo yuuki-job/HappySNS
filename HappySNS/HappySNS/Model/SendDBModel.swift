@@ -15,24 +15,26 @@ class SendDBModel{
     var userName = String()
     var postComment = String()
     var postImageView = Data()
+    var currentTime = String()
     
     var db = Firestore.firestore()
     
-    init(userID:String,userName:String,postComment:String,postImageView:Data) {
+    init(userID:String,userName:String,postComment:String,postImageView:Data,currentTime:String) {
         self.userID = userID
         self.userName = userName
         self.postComment = postComment
         self.postImageView = postImageView
+        self.currentTime = currentTime
     }
     
     func sendData(){
         
-        self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":self.postImageView])
+        self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":self.postImageView,"currentTime":self.currentTime])
         
     }
     class func sendImageData(postImageView:Data){
         let storageRef = Storage.storage().reference()
-        let ref = storageRef.child("image.jpg")
+        let ref = storageRef.child("image.jpg/file.png")
         
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"

@@ -6,10 +6,23 @@
 //
 
 import Foundation
-struct DataSet{
-    let userID:String
-    let userName:String
-    let postComment:String
-    let postImageView:String?
+class DataSet{
+    var userID:String!
+    var userName:String!
+    var postComment:String!
+    var postImageView:String?
+    var currentTime:String!
     
+    
+    init(userID:String,userName:String,postComment:String,currentTime:String) {
+        
+        self.userID = userID
+        self.userName = userName
+        self.postComment = postComment
+        self.currentTime = currentTime
+        
+    }
+    init(postImageView:String) {
+        self.postImageView = postImageView
+    }
 }
