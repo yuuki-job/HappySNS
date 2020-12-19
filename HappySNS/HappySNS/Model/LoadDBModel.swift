@@ -64,13 +64,12 @@ class LoadPostDataManager{
                 
                 for document in querySnapshot!.documents {
                     let data = document.data()
-                    print(data)
-                    guard let userID = data["userID"] as? String,let userName = data["userName"] as? String,let currentTime = data["currentTime"] as? String else{return}
-                    guard let postComment = data["comment"] as? String else{return}
+            
+                    guard let userID = data["userID"] as? String,let userName = data["userName"] as? String,let currentTime = data["currentTime"] as? String,let postComment = data["comment"] as? String,let postImageView = data["postImageView"] as? String else{return}
+                    
                     //let postImageView = data["postImageView"] as? String
                     print(postComment)
-                    let newDataSet = DataSet(userID: userID, userName: userName, postComment: postComment, currentTime: currentTime)
-                    
+                    let newDataSet = DataSet(userID: userID, userName: userName, postComment: postComment, currentTime: currentTime, postImageView: postImageView )
                     dataSet2.append(newDataSet)
                     
                     print("新規メッセージを取得しました")
@@ -84,19 +83,26 @@ class LoadPostDataManager{
             }
         }
     }
-    func downloadImage(){
-        Storage.storage().reference().child("image.jpg/file.png").downloadURL { (url, error) in
+    /*func downloadImage(){
+        var imageDatas:[DataSet] = []
+        
+        let dataRef = Firestore.firestore().collection("datas").document().path
+        let dataRefId = String(dataRef.dropFirst(5))
+        
+        Storage.storage().reference().child("image.jpg").child(dataRefId).downloadURL { (url, error) in
             if let error = error {
                 print(error)
             } else {
                 guard let urlString = url?.absoluteString else{return}
+                print(urlString)
                 let imageData = DataSet(postImageView: urlString)
-                self.dataSets.append(imageData)
-                print(urlString )
+                imageDatas.append(imageData)
+                self.dataSets = imageDatas
+                
             }
         }
         
-    }
+    }*/
 }
 
 

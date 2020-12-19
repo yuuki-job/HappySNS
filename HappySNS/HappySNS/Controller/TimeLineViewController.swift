@@ -66,7 +66,7 @@ class TimeLineViewController: UIViewController{
             DispatchQueue.main.async {
                 
                 self.loadDBModel.getPostData()
-                self.loadDBModel.downloadImage()
+                //self.loadDBModel.downloadImage()
                 self.tableView.reloadData()
                 self.semaphore.signal() // 処理が終わった信号を送る
                 

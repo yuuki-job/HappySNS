@@ -19,34 +19,59 @@ class SendDBModel{
     
     var db = Firestore.firestore()
     
-    init(userID:String,userName:String,postComment:String,postImageView:Data,currentTime:String) {
+    init(userID:String,userName:String,postComment:String,currentTime:String,postImageView:Data) {
         self.userID = userID
         self.userName = userName
         self.postComment = postComment
         self.postImageView = postImageView
         self.currentTime = currentTime
     }
-    
     func sendData(){
         
-        self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":self.postImageView,"currentTime":self.currentTime])
-        
-    }
-    class func sendImageData(postImageView:Data){
-        let storageRef = Storage.storage().reference()
-        let ref = storageRef.child("image.jpg/file.png")
-        
-        let metadata = StorageMetadata()
-        metadata.contentType = "image/jpeg"
-        ref.putData(postImageView, metadata: metadata) { _, error in
-            if (error != nil) {
-                print("upload error!")
-            } else {
-                print("upload successful!")
-            }
+        let imageRef = Storage.storage().reference().child("images").child(UUID().uuidString)
+        imageRef.putData(postImageView, metadata: nil) { (StorageMetadata, error) in
             
-        }
+                guard StorageMetadata != nil else{
+                    print("upload error!")
+                   
+                    return
+                }
+                print("upload successful!")
+            
+            imageRef.downloadURL { (url, error) in
+                if error != nil{
+                    return
+                }
+                self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":url?.absoluteString as Any,"currentTime":self.currentTime])
+                
+            }
+      
+           }
+    
     }
-}
+    
+    
+    /*class func sendImageData(postImageView:Data){
+        
+        let dataRef = Firestore.firestore().collection("datas").document().path
+        let dataRefId = String(dataRef.dropFirst(5))
+        
+        Storage.storage().reference().child("image.jpg").child(dataRefId).putData(postImageView, metadata: nil) { (StorageMetadata, error) in
+        //let ref = storageRef.child("image.jpg/file.png")
+        
+            guard StorageMetadata != nil else{
+                print("upload error!")
+               
+                return
+            }
+            print("upload successful!")
+              
+  
+       }
+       
+            
+        }*/
+    }
+
 
 
