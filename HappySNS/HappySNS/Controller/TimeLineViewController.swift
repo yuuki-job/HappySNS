@@ -24,9 +24,6 @@ class TimeLineViewController: UIViewController{
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        //可変にしたいとき
-        tableView.estimatedRowHeight = 500
         tableView.rowHeight = UITableView.automaticDimension
         
         //登録
@@ -79,9 +76,6 @@ class TimeLineViewController: UIViewController{
     }
 }
 extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         loadDBModel.dataSets.count
     }
