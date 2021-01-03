@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RAMAnimatedTabBarController
 import ViewAnimator
 import SDWebImage
 
@@ -17,6 +16,11 @@ class TimeLineViewController: UIViewController{
     var loadDBModel = LoadPostDataManager()
     //スクロールビューの内容の更新を開始できる標準のコントロール。
     var refreshControl:UIRefreshControl!
+    
+    var addBarButtonItem: UIBarButtonItem!
+    
+    // ボタンを用意
+        //var addBtn: UIBarButtonItem!
     
     let semaphore = DispatchSemaphore(value: 1)
     
@@ -36,6 +40,10 @@ class TimeLineViewController: UIViewController{
         refreshControl.attributedTitle = NSAttributedString(string: "再読み込み中")
         refreshControl.addTarget(self, action: #selector(TimeLineViewController.refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
+        
+        
+        self.navigationItem.title = "マップ"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +66,7 @@ class TimeLineViewController: UIViewController{
         // データ更新関数が終了したら、リフレッシュの表示も終了する
         refreshControl.endRefreshing()
     }
+    
     func updateData () {
         DispatchQueue.global().async {
             
@@ -65,7 +74,7 @@ class TimeLineViewController: UIViewController{
             
             DispatchQueue.main.async {
                 
-                self.loadDBModel.getPostData()
+                self.loadDBModel.getPostData(view: self.view)
                 //self.loadDBModel.downloadImage()
                 self.tableView.reloadData()
                 self.semaphore.signal() // 処理が終わった信号を送る
@@ -77,13 +86,15 @@ class TimeLineViewController: UIViewController{
         tableView.beginUpdates()
         tableView.endUpdates()
     }
+    
 }
 extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        loadDBModel.dataSets.count
+        print("numberOfRowsInSection  \(loadDBModel.dataSets.count)")
+        return loadDBModel.dataSets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

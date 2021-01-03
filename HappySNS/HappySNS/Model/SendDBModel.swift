@@ -40,6 +40,8 @@ class SendDBModel{
             
             imageRef.downloadURL { (url, error) in
                 if error != nil{
+                    
+                    
                     return
                 }
                 self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":url?.absoluteString as Any,"currentTime":self.currentTime])

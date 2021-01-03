@@ -8,9 +8,16 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+import PKHUD
 class LoadPostDataManager{
     
     var dataSets = [DataSet]()
+    {
+        willSet{
+            print("dataSetsCount  \(newValue.count)")
+        }
+        
+    }
     let db = Firestore.firestore()
     //let data = [String:Any]()
     /*func loadContents(){
@@ -52,26 +59,35 @@ class LoadPostDataManager{
      }
      
      }*/
-    func getPostData(){
+    func getPostData(view:UIView){
+        HUD.show(.progress, onView: view)
         var dataSet2:[DataSet] = []
         db.collection("datas").order(by: "currentTime").addSnapshotListener
         { (querySnapshot, err) in
             
             
             if let err = err {
-                print("Error getting documents: \(err)")
+                
+                HUD.hide { (_) in
+                    HUD.flash(.error, delay: 1)
+                    
+                    print("Error getting documents: \(err)")
+                }
             } else {
                 
                 for document in querySnapshot!.documents {
                     let data = document.data()
-            
+                    
                     guard let userID = data["userID"] as? String,let userName = data["userName"] as? String,let currentTime = data["currentTime"] as? String,let postComment = data["comment"] as? String,let postImageView = data["postImageView"] as? String else{return}
                     
-                    //let postImageView = data["postImageView"] as? String
                     print(postComment)
+                    
                     let newDataSet = DataSet(userID: userID, userName: userName, postComment: postComment, currentTime: currentTime, postImageView: postImageView )
                     dataSet2.append(newDataSet)
                     
+                    HUD.hide { (_) in
+                        HUD.flash(.success, delay: 1)
+                    }
                     print("新規メッセージを取得しました")
                     
                     
@@ -84,25 +100,25 @@ class LoadPostDataManager{
         }
     }
     /*func downloadImage(){
-        var imageDatas:[DataSet] = []
-        
-        let dataRef = Firestore.firestore().collection("datas").document().path
-        let dataRefId = String(dataRef.dropFirst(5))
-        
-        Storage.storage().reference().child("image.jpg").child(dataRefId).downloadURL { (url, error) in
-            if let error = error {
-                print(error)
-            } else {
-                guard let urlString = url?.absoluteString else{return}
-                print(urlString)
-                let imageData = DataSet(postImageView: urlString)
-                imageDatas.append(imageData)
-                self.dataSets = imageDatas
-                
-            }
-        }
-        
-    }*/
+     var imageDatas:[DataSet] = []
+     
+     let dataRef = Firestore.firestore().collection("datas").document().path
+     let dataRefId = String(dataRef.dropFirst(5))
+     
+     Storage.storage().reference().child("image.jpg").child(dataRefId).downloadURL { (url, error) in
+     if let error = error {
+     print(error)
+     } else {
+     guard let urlString = url?.absoluteString else{return}
+     print(urlString)
+     let imageData = DataSet(postImageView: urlString)
+     imageDatas.append(imageData)
+     self.dataSets = imageDatas
+     
+     }
+     }
+     
+     }*/
 }
 
 

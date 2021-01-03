@@ -22,6 +22,7 @@
 		52439EF0257F47BF00E73DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52439EEF257F47BF00E73DE1 /* Assets.xcassets */; };
 		527A4487256E176500BF9A49 /* PostContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */; };
 		527A4488256E176500BF9A49 /* PostContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */; };
+		52F9DCC1259710DF00BE9374 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9DCC0259710DF00BE9374 /* LoginViewController.swift */; };
 		6651E1C0754CAF256AF5085C /* Pods_HappySNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE311342F846ABB2803F2AC /* Pods_HappySNSTests.framework */; };
 		8FE166C7B3B94482FBAE27CC /* Pods_HappySNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */; };
 		C2262E682742D32D3B49FEA7 /* Pods_HappySNS_HappySNSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2CBD2224B34BEC2E5E903 /* Pods_HappySNS_HappySNSUITests.framework */; };
@@ -69,6 +70,7 @@
 		52439EEF257F47BF00E73DE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentTableViewCell.swift; sourceTree = "<group>"; };
 		527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContentTableViewCell.xib; sourceTree = "<group>"; };
+		52F9DCC0259710DF00BE9374 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8128676BF3866220082330DA /* Pods-HappySNS-HappySNSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS-HappySNSUITests.release.xcconfig"; path = "Target Support Files/Pods-HappySNS-HappySNSUITests/Pods-HappySNS-HappySNSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		86499B8323AE4E3D4635E2C3 /* Pods-HappySNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS.release.xcconfig"; path = "Target Support Files/Pods-HappySNS/Pods-HappySNS.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		52439EE5257F45A900E73DE1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52F9DCC0259710DF00BE9374 /* LoginViewController.swift */,
 				521AA7632568F4C200D8F748 /* TimeLineViewController.swift */,
 				521AA7D0256918B200D8F748 /* EditViewController.swift */,
 			);
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F9DCC1259710DF00BE9374 /* LoginViewController.swift in Sources */,
 				521AA7642568F4C200D8F748 /* TimeLineViewController.swift in Sources */,
 				521AA7602568F4C200D8F748 /* AppDelegate.swift in Sources */,
 				521AA7BA25690BDB00D8F748 /* DataSet.swift in Sources */,

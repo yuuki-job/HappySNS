@@ -20,7 +20,6 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     }
     
     @IBAction func postButton(_ sender: Any) {
-
         //画像
         guard let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01) else {return}
         
