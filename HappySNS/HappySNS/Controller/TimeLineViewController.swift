@@ -20,7 +20,7 @@ class TimeLineViewController: UIViewController{
     var addBarButtonItem: UIBarButtonItem!
     
     // ボタンを用意
-        //var addBtn: UIBarButtonItem!
+    //var addBtn: UIBarButtonItem!
     
     let semaphore = DispatchSemaphore(value: 1)
     
@@ -41,8 +41,9 @@ class TimeLineViewController: UIViewController{
         refreshControl.addTarget(self, action: #selector(TimeLineViewController.refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
         
-        
-        self.navigationItem.title = "マップ"
+        //navigationbarに画像を設定し、押した時のアクションを設定した
+        let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "post"), style: .plain, target: self, action: #selector(didTapSearch))
+                navigationItem.rightBarButtonItem = searchBarButtonItem
         
     }
     
@@ -56,6 +57,12 @@ class TimeLineViewController: UIViewController{
                        animations: [animation],
                        delay: 0.5)
         
+    }
+    
+    @objc func didTapSearch (){
+        
+       let editVC = self.storyboard?.instantiateViewController(identifier: "editVC") as! EditViewController
+        navigationController?.pushViewController(editVC, animated: true)
     }
     @objc func refresh() {
         updateData()
@@ -103,6 +110,7 @@ extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
         
         cell.postLabel.text = loadDBModel.dataSets[indexPath.row].postComment
         cell.profileImagiView.sd_setImage(with: URL(string: loadDBModel.dataSets[indexPath.row].postImageView ?? ""), completed: nil)
+        cell.userNameLabel.text = loadDBModel.dataSets[indexPath.row].userName
         
         return cell
         

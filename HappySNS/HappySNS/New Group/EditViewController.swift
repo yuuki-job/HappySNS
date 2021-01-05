@@ -23,7 +23,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         //画像
         guard let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01) else {return}
         
-        //SendDBModel.sendImageData(postImageView: passImageViewData)
+        guard let userName = UserDefaults.standard.object(forKey: "userName") as? String else {return}
         
         //日時
         let dateFormatter = DateFormatter()
@@ -33,7 +33,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         
         let currentTime = dateFormatter.string(from: now)
         
-        let sendDBModel = SendDBModel(userID: "", userName: "", postComment: textView.text ?? "", currentTime: currentTime, postImageView: passImageViewData)
+        let sendDBModel = SendDBModel(userID: "", userName: userName, postComment: textView.text ?? "", currentTime: currentTime, postImageView: passImageViewData)
         
         sendDBModel.sendData()
         //戻る
