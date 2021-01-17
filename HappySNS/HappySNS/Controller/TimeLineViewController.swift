@@ -42,8 +42,8 @@ class TimeLineViewController: UIViewController{
         tableView.addSubview(refreshControl)
         
         //navigationbarに画像を設定し、押した時のアクションを設定した
-        let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "post"), style: .plain, target: self, action: #selector(didTapSearch))
-                navigationItem.rightBarButtonItem = searchBarButtonItem
+        /*let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "post"), style: .plain, target: self, action: #selector(didTapSearch))
+                navigationItem.rightBarButtonItem = searchBarButtonItem*/
         
     }
     
@@ -59,11 +59,21 @@ class TimeLineViewController: UIViewController{
         
     }
     
-    @objc func didTapSearch (){
+    @IBAction func nextButton(_ sender: Any) {
+        
+        let editVC = self.storyboard?.instantiateViewController(identifier: "editVC") as! EditViewController
+         navigationController?.pushViewController(editVC, animated: true)
+    }
+    @IBAction func configurationButton(_ sender: Any) {
+        let configurationVC = self.storyboard?.instantiateViewController(identifier: "configurationVC") as! SeeConfigurationViewController
+         navigationController?.pushViewController(configurationVC, animated: true)
+        
+    }
+    /*@objc func didTapSearch (){
         
        let editVC = self.storyboard?.instantiateViewController(identifier: "editVC") as! EditViewController
         navigationController?.pushViewController(editVC, animated: true)
-    }
+    }*/
     @objc func refresh() {
         updateData()
         
