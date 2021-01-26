@@ -62,7 +62,7 @@ class LoadPostDataManager{
     func getPostData(view:UIView){
         HUD.show(.progress, onView: view)
         var dataSet2:[DataSet] = []
-        db.collection("datas").order(by: "currentTime").addSnapshotListener
+        db.collection("user").document((Auth.auth().currentUser?.email)!).collection("data").order(by: "currentTime").addSnapshotListener
         { (querySnapshot, err) in
             
             

@@ -254,8 +254,8 @@
             filePath = "HappySNS/Controller/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "loginButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -274,6 +274,102 @@
             endingLineNumber = "24"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B49E580-9C71-4CE1-8813-968509559E73"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HappySNS/Controller/StartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "newAccountButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B49E580-9C71-4CE1-8813-968509559E73 - e7b93849afd7252d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HappySNS.StartViewController.newAccountButton(Any) -&gt; ()"
+                  moduleName = "HappySNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tokunagaisamunozomi/Documents/%E6%9B%B8%E9%A1%9E%20-%20%E5%BE%B3%E6%B0%B8%E5%8B%87%E5%B8%8C%E3%81%AEMacBook%20Air/myApp/HappySNSFolder/HappySNS/HappySNS/Controller/StartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  uuid = "9B49E580-9C71-4CE1-8813-968509559E73 - e7b93849afd7252d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HappySNS.StartViewController.newAccountButton(Any) -&gt; ()"
+                  moduleName = "HappySNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tokunagaisamunozomi/Documents/%E6%9B%B8%E9%A1%9E%20-%20%E5%BE%B3%E6%B0%B8%E5%8B%87%E5%B8%8C%E3%81%AEMacBook%20Air/myApp/HappySNSFolder/HappySNS/HappySNS/Controller/StartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "851">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50C114B5-C2B2-400D-847F-17478783933B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HappySNS/Controller/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loginButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50C114B5-C2B2-400D-847F-17478783933B - 8007249036e7cd64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HappySNS.LoginViewController.loginButton(Any) -&gt; ()"
+                  moduleName = "HappySNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tokunagaisamunozomi/Documents/%E6%9B%B8%E9%A1%9E%20-%20%E5%BE%B3%E6%B0%B8%E5%8B%87%E5%B8%8C%E3%81%AEMacBook%20Air/myApp/HappySNSFolder/HappySNS/HappySNS/Controller/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1317">
+               </Location>
+               <Location
+                  uuid = "50C114B5-C2B2-400D-847F-17478783933B - 8007249036e7cd64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HappySNS.LoginViewController.loginButton(Any) -&gt; ()"
+                  moduleName = "HappySNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tokunagaisamunozomi/Documents/%E6%9B%B8%E9%A1%9E%20-%20%E5%BE%B3%E6%B0%B8%E5%8B%87%E5%B8%8C%E3%81%AEMacBook%20Air/myApp/HappySNSFolder/HappySNS/HappySNS/Controller/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1440">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

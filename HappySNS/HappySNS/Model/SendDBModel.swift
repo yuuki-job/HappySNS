@@ -44,7 +44,7 @@ class SendDBModel{
                     
                     return
                 }
-                self.db.collection("datas").document().setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":url?.absoluteString as Any,"currentTime":self.currentTime])
+                self.db.collection("user").document((Auth.auth().currentUser?.email)!).collection("data").document("userData").setData(["userID":self.userID,"userName":self.userName,"comment":self.postComment,"postImageView":url?.absoluteString as Any,"currentTime":self.currentTime])
                 
             }
       

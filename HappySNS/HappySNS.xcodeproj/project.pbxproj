@@ -20,11 +20,14 @@
 		521AA7C925690F5100D8F748 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521AA7C825690F5100D8F748 /* GoogleService-Info.plist */; };
 		521AA7D1256918B200D8F748 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AA7D0256918B200D8F748 /* EditViewController.swift */; };
 		52439EF0257F47BF00E73DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52439EEF257F47BF00E73DE1 /* Assets.xcassets */; };
+		525FBBCD25BFCA9500B09CA0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FBBCC25BFCA9500B09CA0 /* StartViewController.swift */; };
+		525FBBD525BFCDD100B09CA0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FBBD425BFCDD100B09CA0 /* LoginViewController.swift */; };
+		52746F8025BC281900BE1A41 /* FirstProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52746F7F25BC281900BE1A41 /* FirstProfileViewController.swift */; };
 		527A4487256E176500BF9A49 /* PostContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */; };
 		527A4488256E176500BF9A49 /* PostContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */; };
 		52E5458425AAC56A009641E5 /* SeeConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5458325AAC56A009641E5 /* SeeConfigurationViewController.swift */; };
 		52E5458925AD36AB009641E5 /* EditConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5458825AD36AB009641E5 /* EditConfigurationViewController.swift */; };
-		52F9DCC1259710DF00BE9374 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9DCC0259710DF00BE9374 /* LoginViewController.swift */; };
+		52F9DCC1259710DF00BE9374 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9DCC0259710DF00BE9374 /* SignInViewController.swift */; };
 		6651E1C0754CAF256AF5085C /* Pods_HappySNSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE311342F846ABB2803F2AC /* Pods_HappySNSTests.framework */; };
 		8FE166C7B3B94482FBAE27CC /* Pods_HappySNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */; };
 		C2262E682742D32D3B49FEA7 /* Pods_HappySNS_HappySNSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2CBD2224B34BEC2E5E903 /* Pods_HappySNS_HappySNSUITests.framework */; };
@@ -70,11 +73,14 @@
 		521AA7C825690F5100D8F748 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		521AA7D0256918B200D8F748 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = "../New Group/EditViewController.swift"; sourceTree = "<group>"; };
 		52439EEF257F47BF00E73DE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		525FBBCC25BFCA9500B09CA0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		525FBBD425BFCDD100B09CA0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52746F7F25BC281900BE1A41 /* FirstProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstProfileViewController.swift; sourceTree = "<group>"; };
 		527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentTableViewCell.swift; sourceTree = "<group>"; };
 		527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostContentTableViewCell.xib; sourceTree = "<group>"; };
 		52E5458325AAC56A009641E5 /* SeeConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeConfigurationViewController.swift; sourceTree = "<group>"; };
 		52E5458825AD36AB009641E5 /* EditConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditConfigurationViewController.swift; sourceTree = "<group>"; };
-		52F9DCC0259710DF00BE9374 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52F9DCC0259710DF00BE9374 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7509D8E82804C1BFF6D45F32 /* Pods_HappySNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappySNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8128676BF3866220082330DA /* Pods-HappySNS-HappySNSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS-HappySNSUITests.release.xcconfig"; path = "Target Support Files/Pods-HappySNS-HappySNSUITests/Pods-HappySNS-HappySNSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		86499B8323AE4E3D4635E2C3 /* Pods-HappySNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappySNS.release.xcconfig"; path = "Target Support Files/Pods-HappySNS/Pods-HappySNS.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,11 +196,14 @@
 		52439EE5257F45A900E73DE1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				52F9DCC0259710DF00BE9374 /* LoginViewController.swift */,
+				525FBBCC25BFCA9500B09CA0 /* StartViewController.swift */,
+				52F9DCC0259710DF00BE9374 /* SignInViewController.swift */,
+				525FBBD425BFCDD100B09CA0 /* LoginViewController.swift */,
 				521AA7632568F4C200D8F748 /* TimeLineViewController.swift */,
 				521AA7D0256918B200D8F748 /* EditViewController.swift */,
 				52E5458325AAC56A009641E5 /* SeeConfigurationViewController.swift */,
 				52E5458825AD36AB009641E5 /* EditConfigurationViewController.swift */,
+				52746F7F25BC281900BE1A41 /* FirstProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -462,13 +471,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525FBBD525BFCDD100B09CA0 /* LoginViewController.swift in Sources */,
 				52E5458925AD36AB009641E5 /* EditConfigurationViewController.swift in Sources */,
-				52F9DCC1259710DF00BE9374 /* LoginViewController.swift in Sources */,
+				52F9DCC1259710DF00BE9374 /* SignInViewController.swift in Sources */,
+				52746F8025BC281900BE1A41 /* FirstProfileViewController.swift in Sources */,
 				521AA7642568F4C200D8F748 /* TimeLineViewController.swift in Sources */,
 				521AA7602568F4C200D8F748 /* AppDelegate.swift in Sources */,
 				52E5458425AAC56A009641E5 /* SeeConfigurationViewController.swift in Sources */,
 				521AA7BA25690BDB00D8F748 /* DataSet.swift in Sources */,
 				521AA7C425690CB800D8F748 /* SendDBModel.swift in Sources */,
+				525FBBCD25BFCA9500B09CA0 /* StartViewController.swift in Sources */,
 				521AA7622568F4C200D8F748 /* SceneDelegate.swift in Sources */,
 				527A4487256E176500BF9A49 /* PostContentTableViewCell.swift in Sources */,
 				521AA7BF25690C3100D8F748 /* LoadDBModel.swift in Sources */,
