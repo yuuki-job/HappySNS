@@ -18,6 +18,11 @@ class LoadPostDataManager{
         }
         
     }
+    var prefectureData = String()
+    var ageData = Int()
+    var gender = String()
+    
+    
     let db = Firestore.firestore()
     //let data = [String:Any]()
     /*func loadContents(){
@@ -96,6 +101,23 @@ class LoadPostDataManager{
                     self.dataSets.reverse()
                     //print(self.dataSets)
                 }
+            }
+        }
+    }
+    
+    func getProfileData(){
+        
+        Firestore.firestore().collection("user").document((Auth.auth().currentUser?.email)!).collection("data").document("profileData").getDocument { (documentData, error) in
+            if let error = error{
+                print(error)
+            }else{
+                guard let data = documentData?.data() else{return}
+                
+                guard let prefecture = data["prefecture"] as? String,let age = data["age"] as? Int,let gender = data["gender"] as? String else {return}
+                let newData = DataSet(prefecture: prefecture, age: age, gender: gender)
+                self.prefectureData = newData.prefecture
+                self.ageData = newData.age
+                self.gender = newData.gender
             }
         }
     }

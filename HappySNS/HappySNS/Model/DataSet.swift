@@ -12,6 +12,12 @@ class DataSet{
     var postComment:String?
     var postImageView:String?
     var currentTime:String!
+    var prefecture:String!
+    var age:Int!
+    var gender:String!
+    
+    
+    
     
     
     init(userID:String,userName:String,postComment:String,currentTime:String,postImageView:String) {
@@ -21,6 +27,11 @@ class DataSet{
         self.postComment = postComment
         self.currentTime = currentTime
         self.postImageView = postImageView
+    }
+    init(prefecture:String,age:Int,gender:String) {
+        self.prefecture = prefecture
+        self.age = age
+        self.gender = gender
     }
    
 }

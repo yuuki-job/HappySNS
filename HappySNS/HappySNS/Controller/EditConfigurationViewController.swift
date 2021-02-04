@@ -63,6 +63,14 @@ class EditConfigurationViewController: UIViewController {
         
      
     }
+    override func viewWillAppear(_ animated: Bool) {
+        guard let prefecture = prefectureSelectionTextField.text,let age = ageSelectionTextField.text else {return}
+        let genderData = ["title":genderLabel.titleForSegment(at: genderLabel.selectedSegmentIndex) as Any,"index":genderLabel.selectedSegmentIndex] as [String : Any]
+        
+        //firebaseにデータを送る
+        let sendData = SendDBModel(prefecture: prefecture, age: Int(age) ?? 0, gender: genderData)
+        sendData.sendProfileData()
+    }
     // 決定ボタン押下
     @objc func done() {
         ageSelectionTextField.endEditing(true)

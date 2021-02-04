@@ -16,6 +16,11 @@ class SendDBModel{
     var postComment = String()
     var postImageView = Data()
     var currentTime = String()
+    var prefecture = String()
+    var age = Int()
+    var gender = [String:Any]()
+    
+    
     
     var db = Firestore.firestore()
     
@@ -25,6 +30,11 @@ class SendDBModel{
         self.postComment = postComment
         self.postImageView = postImageView
         self.currentTime = currentTime
+    }
+    init(prefecture:String,age:Int,gender:[String:Any]) {
+        self.prefecture = prefecture
+        self.age = age
+        self.gender = gender
     }
     func sendData(){
         
@@ -50,6 +60,28 @@ class SendDBModel{
       
            }
     
+    }
+    func sendProfileData(){
+        
+        let imageRef = Storage.storage().reference().child("images").child(UUID().uuidString)
+        imageRef.putData(postImageView, metadata: nil) { (StorageMetadata, error) in
+            
+                guard StorageMetadata != nil else{
+                    print("upload error!")
+                   
+                    return
+                }
+                print("upload successful!")
+            
+            imageRef.downloadURL { (url, error) in
+                if error != nil{
+                    return
+                }
+                self.db.collection("user").document((Auth.auth().currentUser?.email)!).collection("data").document("profileData").setData(["prefecture":self.prefecture,"age":self.age,"gender":self.gender])
+                
+            }
+      
+           }
     }
     
     

@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Firebase
 
 
 class FirstProfileViewController: UIViewController {
     
+    // MARK: - Properties
     var ageArray = [Int](18...130)
     var prefectureArray = ["北海道", "青森県", "岩手県", "宮城県", "秋田県",
                            "山形県", "福島県", "茨城県", "栃木県", "群馬県",
@@ -25,16 +27,12 @@ class FirstProfileViewController: UIViewController {
     let agePickerView = UIPickerView()
     let prefecturePickerView = UIPickerView()
     
+    // MARK: - IBOutlets
     @IBOutlet weak var ageSelectionTextField: UITextField!
-    
     @IBOutlet weak var genderLabel: UISegmentedControl!
-    
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var prefectureSelectionTextField: UITextField!
-    
     @IBOutlet weak var introductionTextField: UITextField!
-    
     
     
     override func viewDidLoad() {
@@ -70,17 +68,18 @@ class FirstProfileViewController: UIViewController {
     // MARK: - Button
     @IBAction func registerProfileButton(_ sender: Any) {
         
-        UserDefaults.standard.setValue(ageSelectionTextField.text, forKey: "age")
-        UserDefaults.standard.setValue(prefectureSelectionTextField.text, forKey: "prefecture")
-        
+        guard let prefecture = prefectureSelectionTextField.text,let age = ageSelectionTextField.text else {return}
         let genderData = ["title":genderLabel.titleForSegment(at: genderLabel.selectedSegmentIndex) as Any,"index":genderLabel.selectedSegmentIndex] as [String : Any]
         
         //firebaseにデータを送る
+        let sendData = SendDBModel(prefecture: prefecture, age: Int(age)!, gender: genderData)
+        sendData.sendProfileData()
+        
         let timeLineVC = self.storyboard?.instantiateViewController(identifier: "timeLineVC") as! TimeLineViewController
         
         navigationController?.pushViewController(timeLineVC, animated: true)
     }
-    
+    // MARK: - IBActions
     @IBAction func imageViewTapButton(_ sender: Any) {
         doAlbum()
     }
@@ -97,6 +96,7 @@ class FirstProfileViewController: UIViewController {
         }
     }
 }
+// MARK: - Extensions
 extension FirstProfileViewController:UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -131,6 +131,8 @@ extension FirstProfileViewController:UIPickerViewDelegate, UIPickerViewDataSourc
         }
     }
 }
+
+// MARK: - Extensions
 extension FirstProfileViewController:UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

@@ -198,12 +198,12 @@
 			children = (
 				525FBBCC25BFCA9500B09CA0 /* StartViewController.swift */,
 				52F9DCC0259710DF00BE9374 /* SignInViewController.swift */,
+				52746F7F25BC281900BE1A41 /* FirstProfileViewController.swift */,
 				525FBBD425BFCDD100B09CA0 /* LoginViewController.swift */,
 				521AA7632568F4C200D8F748 /* TimeLineViewController.swift */,
 				521AA7D0256918B200D8F748 /* EditViewController.swift */,
 				52E5458325AAC56A009641E5 /* SeeConfigurationViewController.swift */,
 				52E5458825AD36AB009641E5 /* EditConfigurationViewController.swift */,
-				52746F7F25BC281900BE1A41 /* FirstProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
