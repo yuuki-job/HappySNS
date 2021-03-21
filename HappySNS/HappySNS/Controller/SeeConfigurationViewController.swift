@@ -17,16 +17,14 @@ class SeeConfigurationViewController: UIViewController {
     @IBOutlet weak var introductionLabel: UILabel!
     
     var newProfileData = ""
-    var profileData = LoadPostDataManager()
+   private var profileData = LoadPostDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         profileImageView.layer.cornerRadius = 25
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         /*guard let ageData = UserDefaults.standard.object(forKey: "age") as? String,let prefectureData = UserDefaults.standard.object(forKey: "prefecture") as? String,let genderData = UserDefaults.standard.object(forKey: "gender") as? [String:Any],let imageData = UserDefaults.standard.object(forKey: "imageData") as? Data   else { return }*/
         guard let introductionData = UserDefaults.standard.object(forKey: "introduction") as? String else { return }
         profileData.getProfileData()
@@ -38,11 +36,8 @@ class SeeConfigurationViewController: UIViewController {
     }
     
     @IBAction func editProfileButton(_ sender: Any) {
-        
         let editConfigurationVC = self.storyboard?.instantiateViewController(identifier: "editConfigurationVC") as! EditConfigurationViewController
         
         navigationController?.pushViewController(editConfigurationVC, animated: true)
-        
     }
-    
 }

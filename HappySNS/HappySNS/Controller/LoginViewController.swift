@@ -19,12 +19,13 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+    
     @IBAction func loginButton(_ sender: Any) {
         guard let userName = userNameTextField.text,let mail = mailTextField.text,let password = passwordTextField.text else {return}
-        
         
         Auth.auth().signIn(withEmail: mail, password: password) { (result, error) in
             
@@ -33,22 +34,20 @@ class LoginViewController: UIViewController {
             }
             if let result = result{
                 print(result)
-            
-            
-            Firestore.firestore().collection("user").document(mail).getDocument { (document, error) in
-                if let error = error{
-                    print(error)
+                
+                Firestore.firestore().collection("user").document(mail).getDocument { (document, error) in
+                    if let error = error{
+                        print(error)
+                    }
+                    if let document = document {
+                        //guard let data = document.data() else{return}
+                        //let name = data["userName"] as! String
+                        
+                        let timeLineVC = self.storyboard?.instantiateViewController(identifier: "timeLineVC") as! TimeLineViewController
+                        
+                        self.navigationController?.pushViewController(timeLineVC, animated: true)
+                    }
                 }
-                if let document = document{
-                    
-                    //guard let data = document.data() else{return}
-                    //let name = data["userName"] as! String
-                    
-                    let timeLineVC = self.storyboard?.instantiateViewController(identifier: "timeLineVC") as! TimeLineViewController
-                    
-                    self.navigationController?.pushViewController(timeLineVC, animated: true)
-                }
-            }
             }
         }
     }

@@ -145,9 +145,11 @@
 				521AA7B225690BAE00D8F748 /* Model */,
 				52418C0E257F434100A0E4C0 /* View */,
 				52439EE5257F45A900E73DE1 /* Controller */,
+				526DB4E32607874B00078D0D /* Storyboard */,
 				521AA75F2568F4C200D8F748 /* AppDelegate.swift */,
 				521AA7612568F4C200D8F748 /* SceneDelegate.swift */,
 				521AA76A2568F4C700D8F748 /* LaunchScreen.storyboard */,
+				52439EEF257F47BF00E73DE1 /* Assets.xcassets */,
 				521AA76D2568F4C700D8F748 /* Info.plist */,
 				521AA7C825690F5100D8F748 /* GoogleService-Info.plist */,
 			);
@@ -185,10 +187,8 @@
 		52418C0E257F434100A0E4C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				521AA7652568F4C200D8F748 /* Main.storyboard */,
 				527A4486256E176500BF9A49 /* PostContentTableViewCell.xib */,
 				527A4485256E176500BF9A49 /* PostContentTableViewCell.swift */,
-				52439EEF257F47BF00E73DE1 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +206,14 @@
 				52E5458825AD36AB009641E5 /* EditConfigurationViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		526DB4E32607874B00078D0D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				521AA7652568F4C200D8F748 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		7EDCA6BB1833FEDE3EC60C4E /* Frameworks */ = {

@@ -28,6 +28,7 @@ class SignInViewController: UIViewController {
         
         guard let userName = userNameTextField.text,let mail = mailTextField.text,let password = passwordTextField.text else {return}
         UserDefaults.standard.setValue(userName, forKey: "userName")
+        
         Auth.auth().createUser(withEmail: mail, password:password) { (result, error) in
             if let error = error {
                 print(error)
@@ -36,6 +37,7 @@ class SignInViewController: UIViewController {
             if let result = result {
                 print(result)
                 Firestore.firestore().collection("user").document(mail).setData(["email" : mail, "userName" : userName])
+                
                 let fpVC = self.storyboard?.instantiateViewController(identifier: "fpVC") as! FirstProfileViewController
                 self.navigationController?.pushViewController(fpVC, animated: true)
             }
