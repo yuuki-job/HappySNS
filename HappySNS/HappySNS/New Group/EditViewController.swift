@@ -19,21 +19,26 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
     }
     
     @IBAction func postButton(_ sender: Any) {
-        //画像
-        guard let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01) else {return}
-        
-        guard let userName = UserDefaults.standard.object(forKey: "userName") as? String else {return}
-        //日時
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .none
-        dateFormatter.timeStyle = .medium
-        let now = Date()
-        let currentTime = dateFormatter.string(from: now)
-        
-        let sendDBModel = SendDBModel(userID: "", userName: userName, postComment: textView.text ?? "", currentTime: currentTime, postImageView: passImageViewData)
-        sendDBModel.sendData()
-        //戻る
-        if textView.text?.isEmpty == false {
+        if textView.text?.isEmpty == true && imageView.image == nil {
+            let alert = UIAlertController(title: "文章か画像を入力してください", message: nil, preferredStyle: .alert)
+            // 確定ボタンの処理
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true, completion: nil)
+        } else {
+            //画像
+            guard let passImageViewData = imageView.image?.jpegData(compressionQuality: 0.01) else {return}
+            
+            guard let userName = UserDefaults.standard.object(forKey: "userName") as? String else {return}
+            //日時
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .none
+            dateFormatter.timeStyle = .medium
+            let now = Date()
+            let currentTime = dateFormatter.string(from: now)
+            
+            let sendDBModel = SendDBModel(userID: "", userName: userName, postComment: textView.text ?? "", currentTime: currentTime, postImageView: passImageViewData)
+            //firebaseにデータを送信
+            sendDBModel.sendData()
             self.navigationController?.popViewController(animated: true)
         }
     }
@@ -55,7 +60,6 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate,UINa
         //ios以降から書かないと大きさ変更できなくなったらしい
         albumButtonItem.customView?.widthAnchor.constraint(equalToConstant: 24.0).isActive = true
         albumButtonItem.customView?.heightAnchor.constraint(equalToConstant: 24.0).isActive = true
-        //let albumButton = UIBarButtonItem(title: UIImage(named: "album"), style: .done, target: self, action: #selector(tapAlbumButton))
         let cancelButton = UIBarButtonItem(title: "キャンセル", style: .plain, target: self, action: #selector(tapCancelButton))
         
         toolbar.setItems([flexibleItem,albumButtonItem,cancelButton], animated: true)

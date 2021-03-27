@@ -26,16 +26,10 @@ class TimeLineViewController: UIViewController{
         refreshControl.attributedTitle = NSAttributedString(string: "再読み込み中")
         refreshControl.addTarget(self, action: #selector(TimeLineViewController.refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
-        //navigationbarに画像を設定し、押した時のアクションを設定した
-        /*let searchBarButtonItem = UIBarButtonItem(image: UIImage(named: "post"), style: .plain, target: self, action: #selector(didTapSearch))
-         navigationItem.rightBarButtonItem = searchBarButtonItem*/
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //loadDBModel.loadContents()
-        //tableView.reloadData()
         let animation = AnimationType.zoom(scale: 0.5)
-        
         UIView.animate(views: tableView.visibleCells,
                        animations: [animation],
                        delay: 0.5)
@@ -88,7 +82,8 @@ class TimeLineViewController: UIViewController{
 
 extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        tableView.estimatedRowHeight = 200
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,7 +94,7 @@ extension TimeLineViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostContentTableViewCell
         cell.postLabel.text = loadDBModel.dataSets[indexPath.row].postComment
-        cell.profileImagiView.sd_setImage(with: URL(string: loadDBModel.dataSets[indexPath.row].postImageView ?? ""), completed: nil)
+        cell.postImageView.sd_setImage(with: URL(string: loadDBModel.dataSets[indexPath.row].postImageView ?? ""), completed: nil)
         cell.userNameLabel.text = loadDBModel.dataSets[indexPath.row].userName
         return cell
     }
